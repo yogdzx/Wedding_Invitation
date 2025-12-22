@@ -1,0 +1,354 @@
+:root {
+    --primary: #A68B6D;
+    --light: #F9F7F2;
+    --dark: #333;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Logic Tampilan Konten Utama */
+#main-content {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    padding-bottom: 50px;
+}
+
+/* COVER PAGE */
+.cover-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('assets/cover.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cover-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.cover-content {
+    position: relative;
+    color: var(--white);
+    z-index: 10;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* BINGKAI FOTO */
+.frame-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 3;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT STYLING */
+.greeting {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.wedding-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    margin: 5px 0;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* TOMBOL BUKA */
+.btn-open {
+    background: var(--white);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.btn-open:hover {
+    transform: scale(1.05);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.date-top {
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.couple-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.parents {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.amp {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+/* KOTAK KARTU (IDENTIK UNTUK DOA & ACARA) */
+.card {
+    background: var(--white);
+    margin:20px auto;
+    max-width: 500px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* STYLING KHUSUS BAGIAN ISLAMI */
+.ar-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.6rem;
+    line-height: 2.2;
+    margin-bottom: 15px;
+    color: var(--dark);
+    direction: rtl;
+}
+
+.quote-translation {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.quote-surah {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 20px auto;
+    opacity: 0.3;
+}
+
+.wish-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* STYLING ACARA */
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.btn-map {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* GALLERY GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 1
+    2px;
+}
+
+
+/* Styling Kado Digital */
+.bank-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.bank-logo {
+    height: 30px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.account-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--dark);
+}
+
+.account-name {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-copy {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-copy:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* FLOATING MUSIC BUTTON */
+.music-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.footer {
+    padding: 60px 20px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* FLOATING MUSIC BUTTON */
+.music-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*FOOTER*/
+.site-footer {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.site-footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #666;
+}

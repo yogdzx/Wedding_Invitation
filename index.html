@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Sain & Syifa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cover" class="cover-page">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+        <p class="greeting">Hello, You're Invited</p>
+        <div class="frame-container">
+            <div class="profile-frame">
+                <img src="assets/foto-cover.jpg" alt="Sain & Syifa">
+            </div>
+        </div>
+        <h2 class="wedding-title">The Wedding of</h2>
+        <h1 class="couple-names">Sain & Syifa</h1>
+        <button class="btn-open" onclick="bukaUndangan()">Buka Undangan</button>
+        </div>
+    </div>
+</div>
+
+<div id="main-content">
+<div class="content-wrapper">
+
+<section class="hero fade-in-text">
+    <p class="date-top">MINGGU, 04 JANUARI 2026</p>
+    <div class="mempelai-detail">
+        <h2 class="couple-main">Sain</h2>
+        <p class="parents">Putra kedua dari Bapak Bakroni & Ibu Mastur</p>
+        <h2 class="amp">&</h2>
+        <h2 class="couple-main">Syifa Nurhikmah</h2>
+        <p class="parents">Putri pertama dari Bapak Saripullah & Ibu Sri M / Ningsih</p>
+    </div>
+</section>
+
+<section class="islamic-quote fade-in-text">
+    <div class="card">
+        <p class="ar-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً</p>
+        <p class="quote-translation">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+        </p>
+        <p class="quote-surah">(QS. Ar-Rum: 21)</p>
+        <div class="divider"></div>
+        <p class="wish-text">
+            Assalamu’alaikum Warahmatullahi Wabarakatuh. <br><br>
+            Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang Kau ciptakan dalam ikatan pernikahan.
+        </p>
+    </div>
+</section>
+
+<section class="event-section fade-in-text">
+    <div class="card">
+        <h2 class="section-title">Akad & Resepsi</h2>
+        <div class="event-grid">
+            <div class="event-item">
+                <span class="event-icon">📅</span>
+                <p><strong>Hari / Tanggal</strong></p>
+                <p>Minggu, 04 Jan 2026</p>
+            </div>
+            <div class="event-item">
+                <span class="event-icon">⏰</span>
+                <p><strong>Waktu</strong></p>
+                <p>09.00 WIB - Selesai</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="location-box">
+            <p><strong>Lokasi Acara</strong></p>
+            <p>Kp. Cisalam, Desa Cisalam</p>
+            <p>Kec. Baros, Kab. Serang - Banten</p>
+            <a href="https://maps.app.goo.gl/MzFLybLs4KWgNhF7A" target="_blank" class="btn-map">📍 Lihat Lokasi</a>
+        </div>
+    </div>
+</section>
+
+<section class="gallery fade-in-text">
+    <h2 class="section-title">Album Foto</h2>
+    <div class="grid">
+        <img src="assets/foto1.jpg" alt="Gallery 1">
+        <img src="assets/foto2.jpg" alt="Gallery 2">
+        <img src="assets/foto3.jpg" alt="Gallery 3">
+        <img src="assets/foto4.jpg" alt="Gallery 4">
+    </div>
+</section>
+
+<section class="gift-section fade-in-text">
+    <div class="card">
+        <h2 class="section-title">Kado Digital</h2>
+        <p class="wish-text">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih Anda, kami menyediakan fitur kado digital:</p>
+        
+        <button class="btn-map" onclick="toggleGift()">Kirim Hadiah</button>
+
+        <div id="gift-container" style="display: none; margin-top: 25px;">
+            <div class="bank-card">
+                <img src="assets/BRI_2020.svg" alt="BCA" class="bank-logo">
+                <p class="account-number" id="norek1">4849 0107 7625 536</p>
+                <p class="account-name">A/N SAIN</p>
+                <button class="btn-copy" onclick="copyText('norek1')">Salin No. Rekening</button>
+            </div>
+
+            <div class="bank-card">
+                <img src="assets/Logo_dana_blue.png" alt="Dana" class="bank-logo" style="filter: hue-rotate(90deg);">
+                <p class="account-number" id="norek2">085717571715</p>
+                <p class="account-name">A/N SYIFA NURHIKMAH</p>
+                <button class="btn-copy" onclick="copyText('norek2')">Salin No. Rekening</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+  <small>
+    © 2025 Sain & Syifa <br>
+    Website by 
+    <a href="https://instagram.com/alfagistore" target="_blank">ALFAGI</a> ·
+    <a href="https://wa.me/6281336005966" target="_blank">WhatsApp</a>
+  </small>
+</footer>
+
+
+    <div id="music-control" class="music-toggle" onclick="toggleMusic()">
+        <span id="music-icon">🎵</span>
+    </div>
+    <audio id="weddingMusic" loop preload="auto">
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
