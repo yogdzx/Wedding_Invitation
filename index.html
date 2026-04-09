@@ -1,138 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wedding of Sain & Syifa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Amiri&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalam Kala — Undangan Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- goole font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon cloudlare -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#home" class="nav-logo">Kalam <span>Kala</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#tema">Tema</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a href="#kontak" class="nav-cta" style="display: none" id="navCtaDesktop"
+        >Mulai Sekarang</a
+      >
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-<div id="cover" class="cover-page">
-    <div class="cover-overlay"></div>
-    <div class="cover-content">
-        <p class="greeting">Hello, You're Invited</p>
-        <div class="frame-container">
-            <div class="profile-frame">
-                <img src="assets/foto-cover.jpg" alt="Sain & Syifa">
-            </div>
-        </div>
-        <h2 class="wedding-title">The Wedding of</h2>
-        <h1 class="couple-names">Sain & Syifa</h1>
-        <button class="btn-open" onclick="bukaUndangan()">Buka Undangan</button>
-        </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="closeMobile()">Beranda</a>
+      <a href="#about" onclick="closeMobile()">Tentang</a>
+      <a href="#tema" onclick="closeMobile()">Tema</a>
+      <a href="#kontak" onclick="closeMobile()">Kontak</a>
+      <a
+        href="#kontak"
+        class="btn-primary"
+        style="margin-top: 0.5rem; text-align: center"
+        onclick="closeMobile()"
+        >Mulai Sekarang</a
+      >
     </div>
-</div>
 
-<div id="main-content">
-<div class="content-wrapper">
-
-<section class="hero fade-in-text">
-    <p class="date-top">MINGGU, 04 JANUARI 2026</p>
-    <div class="mempelai-detail">
-        <h2 class="couple-main">Sain</h2>
-        <p class="parents">Putra kedua dari Bapak Bakroni & Ibu Mastur</p>
-        <h2 class="amp">&</h2>
-        <h2 class="couple-main">Syifa Nurhikmah</h2>
-        <p class="parents">Putri pertama dari Bapak Saripullah & Ibu Sri M / Ningsih</p>
-    </div>
-</section>
-
-<section class="islamic-quote fade-in-text">
-    <div class="card">
-        <p class="ar-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً</p>
-        <p class="quote-translation">
-            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero-bg-pattern"></div>
+      <div class="hero-deco"></div>
+      <div class="hero-deco-2"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Undangan Digital Eksklusif</p>
+        <h1 class="hero-title">
+          Setiap Momen<br />Layak Dirayakan<br /><em>dengan Indah</em>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">
+          Kami menciptakan undangan digital yang elegan dan berkesan<br />untuk
+          pernikahan Anda.
         </p>
-        <p class="quote-surah">(QS. Ar-Rum: 21)</p>
-        <div class="divider"></div>
-        <p class="wish-text">
-            Assalamu’alaikum Warahmatullahi Wabarakatuh. <br><br>
-            Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang Kau ciptakan dalam ikatan pernikahan.
-        </p>
-    </div>
-</section>
-
-<section class="event-section fade-in-text">
-    <div class="card">
-        <h2 class="section-title">Akad & Resepsi</h2>
-        <div class="event-grid">
-            <div class="event-item">
-                <span class="event-icon">📅</span>
-                <p><strong>Hari / Tanggal</strong></p>
-                <p>Minggu, 04 Jan 2026</p>
-            </div>
-            <div class="event-item">
-                <span class="event-icon">⏰</span>
-                <p><strong>Waktu</strong></p>
-                <p>09.00 WIB - Selesai</p>
-            </div>
+        <div class="hero-actions">
+          <a href="#tema" class="btn-primary">Lihat Koleksi Tema</a>
+          <a href="#about" class="btn-outline">Pelajari Lebih Lanjut</a>
         </div>
-        <div class="divider"></div>
-        <div class="location-box">
-            <p><strong>Lokasi Acara</strong></p>
-            <p>Kp. Cisalam, Desa Cisalam</p>
-            <p>Kec. Baros, Kab. Serang - Banten</p>
-            <a href="https://maps.app.goo.gl/MzFLybLs4KWgNhF7A" target="_blank" class="btn-map">📍 Lihat Lokasi</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div>
+            <p class="section-tag">Tentang Kami</p>
+            <h2 class="about-heading">
+              Keanggunan dalam <strong>Setiap Kata</strong> yang Tertulis
+            </h2>
+            <p class="about-text">
+              Kalam Kala lahir dari keyakinan bahwa sebuah undangan adalah kesan
+              pertama dari sebuah perayaan. Kami menggabungkan estetika
+              tradisional Indonesia dengan desain kontemporer untuk menciptakan
+              undangan digital yang tak terlupakan.
+            </p>
+            <p class="about-text">
+              Setiap karya kami dirancang dengan cermat — memperhatikan
+              tipografi, palet warna, hingga animasi halus yang membuat tamu
+              Anda terpukau sejak undangan dibuka.
+            </p>
+            <div class="stats-row">
+              <div class="stat">
+                <div class="stat-num">100+</div>
+                <div class="stat-label">Undangan Dibuat</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">98%</div>
+                <div class="stat-label">Klien Puas</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">15+</div>
+                <div class="stat-label">Tema Tersedia</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-card">
+              <div class="about-icon">✦</div>
+              <p>
+                Undangan digital kami dapat dibagikan lewat WhatsApp, Instagram,
+                maupun tautan unik — tanpa biaya cetak, tanpa batas jarak.
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="gallery fade-in-text">
-    <h2 class="section-title">Album Foto</h2>
-    <div class="grid">
-        <img src="assets/foto1.jpg" alt="Gallery 1">
-        <img src="assets/foto2.jpg" alt="Gallery 2">
-        <img src="assets/foto3.jpg" alt="Gallery 3">
-        <img src="assets/foto4.jpg" alt="Gallery 4">
-    </div>
-</section>
+    <!-- TEMA -->
+    <section id="tema">
+      <div class="container">
+        <div class="tema-header">
+          <p class="section-tag">Koleksi Tema</p>
+          <h2 class="tema-title">Pilih Tema yang Mencerminkan Jiwa Anda</h2>
+        </div>
 
-<section class="gift-section fade-in-text">
-    <div class="card">
-        <h2 class="section-title">Kado Digital</h2>
-        <p class="wish-text">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih Anda, kami menyediakan fitur kado digital:</p>
-        
-        <button class="btn-map" onclick="toggleGift()">Kirim Hadiah</button>
+        <div class="tema-grid">
+          <!-- CARD -->
+          <div class="tema-card">
+            <div class="tema-thumb">
+              <img src="assets/tema/tema1.png" alt="Tema 1" />
 
-        <div id="gift-container" style="display: none; margin-top: 25px;">
-            <div class="bank-card">
-                <img src="assets/BRI_2020.svg" alt="BCA" class="bank-logo">
-                <p class="account-number" id="norek1">4849 0107 7625 536</p>
-                <p class="account-name">A/N SAIN</p>
-                <button class="btn-copy" onclick="copyText('norek1')">Salin No. Rekening</button>
+              <!-- OVERLAY -->
+              <div class="tema-overlay">
+                <button class="preview-btn" data-img="assets/tema/tema1.png">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
             </div>
 
-            <div class="bank-card">
-                <img src="assets/Logo_dana_blue.png" alt="Dana" class="bank-logo" style="filter: hue-rotate(90deg);">
-                <p class="account-number" id="norek2">085717571715</p>
-                <p class="account-name">A/N SYIFA NURHIKMAH</p>
-                <button class="btn-copy" onclick="copyText('norek2')">Salin No. Rekening</button>
-            </div>
-        </div>
-    </div>
-</section>
+            <div class="tema-info">
+              <h3 class="tema-name">Rustic Elegance</h3>
+              <p class="tema-desc">
+                Kehangatan kayu, bunga liar, dan nuansa alam yang menawan.
+              </p>
 
-<footer class="site-footer">
-  <small>
-    © 2025 Sain & Syifa <br>
-    Website by 
-    <a href="https://instagram.com/alfagistore" target="_blank">ALFAGI</a> ·
-    <a href="https://wa.me/6281336005966" target="_blank">WhatsApp</a>
-  </small>
+              <a href="template/tema1.html" class="tema-btn">Lihat Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section id="cara-kerja">
+      <p class="section-tag" style="text-align: center">Cara Order</p>
+      <h2 class="section-title">Empat Langkah Menuju Undangan Impian</h2>
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-title">Pilih Tema</div>
+          <div class="step-desc">
+            Telusuri koleksi tema kami dan pilih yang paling sesuai dengan
+            selera Anda.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-title">Kirim Data</div>
+          <div class="step-desc">
+            Klik ORDER SEKARANG dan Isi formulir dengan informasi acara, foto, dan detail yang ingin
+            ditampilkan.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-title">Revisi & ACC</div>
+          <div class="step-desc">
+            Kami kirim draft dalam 1×24 jam. Revisi hingga Anda benar-benar
+            puas.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-title">Bagikan</div>
+          <div class="step-desc">
+            Dapatkan tautan unik dan bagikan ke seluruh tamu lewat platform
+            favorit Anda.
+          </div>
+        </div>
+        <div class="cta-section fade-in-text border-2 border-black">
+          <a
+            href="https://wa.me/6281336005966?text=Halo%20saya%20tertarik"
+            class="btn-primary"
+          >
+            Order Sekarang
+          </a>
+        </div>
+      </div>
+
+      <!-- modal image -->
+
+      <div id="imageModal" class="image-modal">
+        <span class="close-image">&times;</span>
+        <img id="modalImg" src="" />
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak">
+      <div class="kontak-grid">
+        <div>
+          <p class="section-tag">Hubungi Kami</p>
+          <h2 class="kontak-heading">Mari Wujudkan Undangan Impian Anda</h2>
+          <p class="kontak-sub">
+            Konsultasikan kebutuhan undangan Anda dengan tim kami. Kami siap
+            membantu dari pemilihan tema hingga pengiriman undangan ke tamu-tamu
+            Anda.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">kalamkala26@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✆</div>
+            <div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-val">+62 813-3600-5966</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <div class="contact-label">Instagram</div>
+              <div class="contact-val">@kalamkala26</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-input" placeholder="Nama Anda" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp</label>
+            <input
+              type="tel"
+              class="form-input"
+              placeholder="+62 8xx-xxxx-xxxx"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Pesan</label>
+            <textarea
+              class="form-input"
+              placeholder="Ceritakan momen spesial Anda..."
+            ></textarea>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 0.5rem">
+            Kirim Pesan
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Top Section -->
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Kalam <span>Kala</span></div>
+        <p class="footer-tagline">Undangan Digital untuk Momen Spesial</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#tema">Tema</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Social Media</h4>
+        <a href="#"><i class="fab fa-instagram"></i> kalamkala</a>
+        <a href="#"><i class="fab fa-tiktok"></i> kalamkala26</a>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2026 KalamKala. All rights reserved</p>
+    </div>
+
+  </div>
 </footer>
+<!-- FLOATING WHATSAPP -->
+<a 
+  href="https://wa.me/6281336005966?text=Halo%20saya%20tertarik%20dengan%20undangan%20digital"
+  class="wa-float"
+  target="_blank"
+  aria-label="Chat WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+      function closeMobile() {
+        mobileMenu.classList.remove("open");
+      }
 
+      // Show desktop CTA after scroll
+      const navCta = document.getElementById("navCtaDesktop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 80) {
+          navCta.style.display = "inline-block";
+        } else {
+          navCta.style.display = "none";
+        }
+      });
 
-    <div id="music-control" class="music-toggle" onclick="toggleMusic()">
-        <span id="music-icon">🎵</span>
-    </div>
-    <audio id="weddingMusic" loop preload="auto">
-    <source src="assets/sound.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+      // Scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.style.opacity = "1";
+              e.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
 
+      document
+        .querySelectorAll(".tema-card, .step, .about-visual, .stat")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
 
-    <script src="script.js"></script>
-</body>
+      // Script modal life full image
+      const previewBtns = document.querySelectorAll(".preview-btn");
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const closeImg = document.querySelector(".close-image");
+
+      previewBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const imgSrc = this.getAttribute("data-img");
+          modal.style.display = "flex";
+          modalImg.src = imgSrc;
+        });
+      });
+
+      closeImg.onclick = () => {
+        modal.style.display = "none";
+      };
+
+      modal.onclick = (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
 </html>
